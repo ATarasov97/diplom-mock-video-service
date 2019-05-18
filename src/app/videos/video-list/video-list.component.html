@@ -1,0 +1,15 @@
+<mat-list>
+  <mat-list-item (click)="onVideoChose(video.id)" *ngFor="let video of videoList | async">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    {{video.name}}
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+<form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input type="file" name="profile" (change)="onFileSelect($event)" />
+  </div>
+  <div>
+    <button type="submit">Upload</button>
+  </div>
+</form>

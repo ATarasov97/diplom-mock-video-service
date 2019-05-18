@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-content>
+    <video class="player" width="960" heigth="540" controls>
+      <source src="cache/file/{{id}}" type="video/mp4">
+    </video>
+    <ng-container>
+
+    </ng-container>
+    <h1>{{metadata?.name}}</h1>
+    <div class="views">{{metadata?.views}} views</div>
+    <div class="description">{{metadata?.description}}</div>
+  </mat-card-content>
+</mat-card>
